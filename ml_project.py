@@ -35,9 +35,9 @@ if __name__ == "__main__":
         data_load()
 
     elif mod == 'experiments':
-        model_name = 'paper'
-        dataset_name = 'Beans'
-        experiments(model_name='paper', dataset_name='Beans')
+        model_name = sys.argv[2]
+        dataset_name = sys.argv[3]
+        experiments(model_name=model_name, dataset_name=dataset_name)
 
     elif mod == 'evaluation':
         pass  # TODO:Insert evaluation
