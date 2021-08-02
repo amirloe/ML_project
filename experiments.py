@@ -1,6 +1,6 @@
 from datetime import time
 
-from sklearn.model_selection import KFold, StratifiedKFold
+from sklearn.model_selection import StratifiedKFold
 import numpy as np
 import pandas as pd
 from models import BaselineModel, MT_MODEL, MT_doubleTeacher_MODEL
@@ -25,7 +25,7 @@ def train_baseline(dataset_name, X, Y, outer_cv=10, inner_cv=3, random_search_tr
         max_acc = 0
         hyper_param_batchsize = np.array([32, 64, 128])
         hyper_param_lr = np.array([0.01, 0.001, 0.0001, 0.005])
-        hyper_param_pooling = np.array(['max', 'avg', None])
+        hyper_param_pooling = np.array(['max', 'avg'])
         hyper_params_dict = {}
         for trail in range(0, random_search_trials):
             b = np.random.choice(hyper_param_batchsize)
