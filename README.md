@@ -7,6 +7,8 @@ This project is based on the paper "Mean teachers are better role models: Weight
 
 The projects contains implamentation of the paper and comparison to a baseline and an improvment of the paper.
 
+Report concluding our results is in the file "ML_Project.pdf"
+
 This is the final project of the course Machine Learning by SISE departmant at BGU 2021.
 
 ## Instructions ##
