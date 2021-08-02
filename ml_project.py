@@ -2,6 +2,7 @@
 import sys
 import numpy as np
 from dataLoader import data_load
+from evaluation import friedman_test
 from experiments import train
 
 
@@ -40,7 +41,7 @@ if __name__ == "__main__":
         experiments(model_name=model_name, dataset_name=dataset_name)
 
     elif mod == 'evaluation':
-        pass  # TODO:Insert evaluation
+        friedman_test()
 
     else:
         print("Illegal mod! insert 'data load' , 'experiments', 'evaluation'")
