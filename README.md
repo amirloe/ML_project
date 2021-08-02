@@ -5,7 +5,7 @@ Ron Keller 312501703
 
 This project is based on the paper "Mean teachers are better role models: Weight-averaged consistency targets improve semi-supervised deep learning results."  by Tarvainen, Antti, and Harri Valpola. [link to the paper](https://arxiv.org/abs/1703.01780)
 
-The projects contains implamentation of the paper ans comparison to a baseline and an improvment of the paper.
+The projects contains implamentation of the paper and comparison to a baseline and an improvment of the paper.
 
 This is the final project of the course Machine Learning by SISE departmant at BGU 2021.
 
@@ -30,6 +30,6 @@ List of datasets: "Beans", "Cifar100_1", "Cifar100_2", "Cifar100_3", 'Cifar100_4
  Detailed information about the models and dataset is in the pdf report.
  
  ### Evaluation ###
- By running the command "python ml_project.py evaluation" the program will run statistic tests based on the CSV files that are in the results folder.
+ By running the command "python ml_project.py evaluation" the program will run statistic tests based on the CSV files that are in the 'Results' folder.
 
  
