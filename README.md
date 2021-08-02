@@ -30,6 +30,6 @@ List of datasets: "Beans", "Cifar100_1", "Cifar100_2", "Cifar100_3", 'Cifar100_4
  Detailed information about the models and dataset is in the pdf report.
  
  ### Evaluation ###
- By running the command "python ml_project.py evaluation" the program will run statistic tests based on the CSV files that are in the 'Results' folder.
-
+ By running the command "python ml_project.py evaluation <experiments_type>" the program will run statistic tests based on the excel files that are in the 'Results' folder.
+ experiments_type can be 'supervised' or 'semisupervised'
  

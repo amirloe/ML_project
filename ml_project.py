@@ -41,7 +41,8 @@ if __name__ == "__main__":
         experiments(model_name=model_name, dataset_name=dataset_name)
 
     elif mod == 'evaluation':
-        stat_test()
+        type = sys.argv[2]
+        stat_test(type)
 
     else:
         print("Illegal mod! insert 'data load' , 'experiments', 'evaluation'")

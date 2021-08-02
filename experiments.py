@@ -9,6 +9,9 @@ import tensorflow as tf
 
 def train_baseline(dataset_name, X, Y, outer_cv=10, inner_cv=3, random_search_trials=50, inner_epochs=1,
                    outer_epochs=5):
+    """
+    Run nested cross validation on the baseline algorithm and put the results under the Results folder
+    """
     skf = StratifiedKFold(n_splits=outer_cv, random_state=7, shuffle=True)
     skf2 = StratifiedKFold(n_splits=inner_cv, random_state=7, shuffle=True)
 
@@ -73,6 +76,9 @@ def train_baseline(dataset_name, X, Y, outer_cv=10, inner_cv=3, random_search_tr
 
 
 def train_paper(dataset_name, X, Y, outer_cv=10, inner_cv=3, random_search_trials=50, inner_epochs=1, outer_epochs=5):
+    """
+    Run nested cross validation on the paper algorithm and put the results under the Results folder
+    """
     skf = StratifiedKFold(n_splits=outer_cv, random_state=7, shuffle=True)
     skf2 = StratifiedKFold(n_splits=inner_cv, random_state=7, shuffle=True)
 
@@ -138,6 +144,9 @@ def train_paper(dataset_name, X, Y, outer_cv=10, inner_cv=3, random_search_trial
 
 
 def train_improve(dataset_name, X, Y, outer_cv=10, inner_cv=3, random_search_trials=50, inner_epochs=1, outer_epochs=5):
+    """
+    Run nested cross validation on the Improved algorithm and put the results under the Results folder
+    """
     skf = StratifiedKFold(n_splits=outer_cv, random_state=7, shuffle=True)
     skf2 = StratifiedKFold(n_splits=inner_cv, random_state=7, shuffle=True)
 

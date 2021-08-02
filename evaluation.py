@@ -5,12 +5,12 @@ import pandas as pd
 import numpy as np
 
 
-def friedman_test():
+def friedman_test(excel_name):
     """
     Collects the AUC for each algorithm and calculate friedman test. Returns the samples that ran through the test and
     statistic and p-val of the test
     """
-    res = pd.read_excel('Results/Experiments_results.xlsx', sheet_name=None)
+    res = pd.read_excel(excel_name, sheet_name=None)
     baseline_auc = []
     paper_auc = []
     improve_auc = []
@@ -31,7 +31,16 @@ def post_hoc_test(baseline_auc, paper_auc, improve_auc):
     print(x)
 
 
-def stat_test():
-    baseline_auc, paper_auc, improve_auc, friedman = friedman_test()
+def stat_test(type):
+    excel_name = ''
+    if type=='supervised':
+        excel_name = 'Results/Experiments_results_supervised.xlsx'
+    elif type=='semisupervised':
+        excel_name = "Results/Experiments_results_semisupervised.xlsx"
+    else:
+        print("Error please insert supervised/semi-supervised")
+        return
+
+    baseline_auc, paper_auc, improve_auc, friedman = friedman_test(excel_name)
     print(f'Friedman test p-value = {friedman.pvalue}')
     post_hoc_test(baseline_auc, paper_auc, improve_auc)
